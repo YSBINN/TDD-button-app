@@ -31,3 +31,13 @@ test("when the + button is pressed, the counter changes to 1", () => {
   const counterElement = screen.getByTestId("counter");
   expect(counterElement).toHaveTextContent("1");
 });
+
+test("when the - button is pressed, the counter changes to 0", () => {
+  render(<App />);
+
+  const minusButton = screen.getByTestId("minus-button");
+  fireEvent.click(minusButton);
+
+  const counterElement = screen.getByTestId("counter");
+  expect(counterElement).toHaveTextContent("-1");
+});
