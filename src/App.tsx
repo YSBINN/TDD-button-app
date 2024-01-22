@@ -11,6 +11,12 @@ function App() {
         >
           -
         </button>
+        <button
+          data-testid="plus-button"
+          onClick={() => setCount(prev => prev + 1)}
+        >
+          +
+        </button>
       </header>
     </div>
   );

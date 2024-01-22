@@ -14,3 +14,10 @@ test("minus button has correct text", () => {
   const minusButton = screen.getByTestId("minus-button");
   expect(minusButton).toHaveTextContent("-");
 });
+
+test("plus button has correct text", () => {
+  render(<App />);
+
+  const plusButton = screen.getByTestId("plus-button");
+  expect(plusButton).toHaveTextContent("+");
+});
