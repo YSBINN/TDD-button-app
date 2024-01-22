@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import App from "./App";
 import "@testing-library/jest-dom";
 
@@ -20,4 +20,14 @@ test("plus button has correct text", () => {
 
   const plusButton = screen.getByTestId("plus-button");
   expect(plusButton).toHaveTextContent("+");
+});
+
+test("when the + button is pressed, the counter changes to 1", () => {
+  render(<App />);
+
+  const plusButton = screen.getByTestId("plus-button");
+  fireEvent.click(plusButton);
+
+  const counterElement = screen.getByTestId("counter");
+  expect(counterElement).toHaveTextContent("1");
 });
