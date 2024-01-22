@@ -46,5 +46,18 @@ test("on/off button has blue color", () => {
   render(<App />);
 
   const onOffButton = screen.getByTestId("on-off-button");
-  expect(onOffButton).toHaveStyle({ backgroundColor: "blue" });
+  expect(onOffButton).toHaveStyle(`background-color: blue`);
+});
+
+test("Prevent action test", () => {
+  render(<App />);
+
+  const onOffButton = screen.getByTestId("on-off-button");
+  fireEvent.click(onOffButton);
+
+  const plusButton = screen.getByTestId("plus-button");
+  expect(plusButton).toBeDisabled();
+
+  const minusButton = screen.getByTestId("minus-button");
+  expect(minusButton).toBeDisabled();
 });
