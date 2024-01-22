@@ -1,6 +1,19 @@
-
+import { useState } from "react";
 function App() {
-  return <div className="App">얀베리 타입스크립트 보일러 플레이트</div>;
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <header>
+        <h3 data-testid="counter">{count}</h3>
+        <button
+          data-testid="minus-button"
+          onClick={() => setCount(prev => prev - 1)}
+        >
+          -
+        </button>
+      </header>
+    </div>
+  );
 }
 
 export default App;
