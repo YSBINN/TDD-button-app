@@ -2,7 +2,7 @@
 ### TDD 기반 버튼 토이 프로젝트
 ## 📌 배포
 
-[[https://ysbinn.github.io/Netflix-Clone/](https://ysbinn.github.io/Netflix-Clone/)](https://main--sparkly-sprinkles-88f32d.netlify.app/)
+https://main--sparkly-sprinkles-88f32d.netlify.app/
 #### 프로젝트 클론
 
 ```shell
